@@ -11,6 +11,10 @@ app.use(v1);
 
 app.get("/status", (_, res: Response) => res.status(200).json({message: "Server on!"}));
 
+app.get("/", (req, res) => {
+	res.json({ message: "Hello World"  });
+})
+
 app.listen(5000, () => console.log("Server is runningon port 5000"));
 
 export default app;
